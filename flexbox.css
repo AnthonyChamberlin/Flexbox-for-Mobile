@@ -2,16 +2,53 @@
     margin: 0;
 }
 
-body { 
-    font-family: verdana;
-    background: #eee;
+body {
+    font-family: 'Josefin Slab', serif;
 }
 
-/* menu base styles */ 
+/* menu base styles */
+
+.device-indicator h3 {
+  font-weight: 100;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 25px;
+  color: #fff;
+  padding: 5px 5px;
+}
+
+.desktop-view {
+  background-color: dodgerblue;
+  display: none;
+}
+
+.tablet-view {
+  background-color: rgb(51, 150, 130);
+  display: none;
+}
+
+.mobile-view {
+  background-color: rgb(132, 54, 150);
+  display: none;
+}
+
+.page-heading h1{
+  margin: 50px;
+  text-align: center;
+  font-weight: 100
+}
 
 nav {
-    background: #333;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #ccc;
     margin: 5px;
+}
+
+li a {
+  border-radius: 20px;
 }
 
 nav ul {
@@ -22,18 +59,19 @@ nav ul {
 nav a {
     text-decoration: none;
     text-align: center;
-    color: #fff;
+    color: #ccc;
     display: block;
     padding: 10px;
     transition: .5s;
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #ccc;
+    color: #fff;
     transition: .5s;
 }
 
-.wrapper { 
+.wrapper {
     width: 100%;
     max-width: 1360px;
     margin: 0 auto;
@@ -46,50 +84,104 @@ nav a:hover {
 }
 
 .box {
-    height: 100px;
+    height: 150px;
     flex: 1 0 200px;
 }
 
+.box:hover {
+  border: 1px dotted #262626;
+  transition: 1s;
+}
+
 .one {
-    background: red;
-    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 15px;
 }
 
 .two {
-    background: blue;
-    margin: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+    margin: 15px;
 
 }
 
 .three {
-    background: green;
-    margin: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 15px;
 }
 
 .four {
-    background: yellow;
-    margin: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+    margin: 15px;
 }
 
 .five {
-    background: teal;
-    margin: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+    margin: 15px;
 
 }
 
 .six {
-    background: purple;
-    margin: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+    margin: 15px;
 }
 
-/* flex styles */ 
+/* flex styles */
+
+@media screen and (min-width: 769px) {
+  .desktop-view {
+    display: block;
+  }
+
+  nav li a{
+      color: dodgerblue;
+  }
+}
 
 @media screen and (max-width: 768px) {
+  .tablet-view {
+    display: block;
+  }
+
     nav ul {
         display: flex;
     }
-    
+
     nav li {
         //flex: 1 1 0;
     }
+
+    nav li a{
+        color: rgb(51, 150, 130);
+    }
+    nav li a:hover {
+      background-color: rgb(51, 150, 130);
+    }
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-view {
+    display: block;
+  }
+
+  .tablet-view {
+    display: none;
+  }
+
+  nav li a{
+      color: rgb(132, 54, 150);
+  }
+  nav li a:hover {
+    background-color: rgb(132, 54, 150);
+  }
 }
