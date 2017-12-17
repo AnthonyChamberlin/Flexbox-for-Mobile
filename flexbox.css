@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+}
+
+body { 
+    font-family: verdana;
+    background: #eee;
+}
+
+/* menu base styles */ 
+
+nav {
+    background: #333;
+    margin: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    transition: .5s;
+}
+
+nav a:hover {
+    background-color: #555;
+    transition: .5s;
+}
+
+.wrapper { 
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 100px;
+    flex: 1 0 200px;
+}
+
+.one {
+    background: red;
+    margin: 5px;
+}
+
+.two {
+    background: blue;
+    margin: 5px;
+
+}
+
+.three {
+    background: green;
+    margin: 5px;
+}
+
+.four {
+    background: yellow;
+    margin: 5px;
+}
+
+.five {
+    background: teal;
+    margin: 5px;
+
+}
+
+.six {
+    background: purple;
+    margin: 5px;
+}
+
+/* flex styles */ 
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: flex;
+    }
+    
+    nav li {
+        //flex: 1 1 0;
+    }
+}
